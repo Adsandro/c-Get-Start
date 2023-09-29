@@ -19,6 +19,22 @@ int codeWithMalloc(){
     free(nome);
     return 0;
 }
+
+int codeWithCalloc(){
+    char *nome;
+    /*O calloc é semelhante ao malloc, porem com o calloc
+    é possivel inicializar com o espaço da memoria zerado*/
+
+    nome = (char *) calloc(10,   sizeof(char));
+    printf("Entre com um nome: ");
+    fgets(nome, 10, stdin);
+    printf("\n %s \n", nome);
+
+    free(nome);
+    return 0;
+
+}
+
 int main(){
-    codeWithMalloc();
+    codeWithRealloc();
 }
